@@ -12,8 +12,19 @@ vector<string> split_string(string);
 
 // Complete the hurdleRace function below.
 int hurdleRace(int k, vector<int> height) {
+	int max_height = -1;
+	for(const auto& iter:height)
+	{
+		if(max_height < iter)
+		{
+			max_height = iter;
+		}
+	}
 
-return 0;
+	if(k > max_height)
+		return 0;
+	else
+		return (max_height - k);
 }
 
 int main()
